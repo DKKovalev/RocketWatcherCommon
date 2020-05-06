@@ -1,0 +1,74 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "ru.dkkovalev",
+    "module": "RocketWatcherCommon",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "moksscfos5fjjiftfeohvzhybu"
+    }
+  },
+  "variants": [
+    {
+      "name": "ios-api",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../RocketWatcherCommon-ios/0.0.1/RocketWatcherCommon-ios-0.0.1.module",
+        "group": "ru.dkkovalev",
+        "module": "RocketWatcherCommon-ios",
+        "version": "0.0.1"
+      }
+    },
+    {
+      "name": "jvm-api",
+      "attributes": {
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../rocket-watcher-common-jvm/0.0.1/rocket-watcher-common-jvm-0.0.1.module",
+        "group": "ru.dkkovalev",
+        "module": "rocket-watcher-common-jvm",
+        "version": "0.0.1"
+      }
+    },
+    {
+      "name": "jvm-runtime",
+      "attributes": {
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../rocket-watcher-common-jvm/0.0.1/rocket-watcher-common-jvm-0.0.1.module",
+        "group": "ru.dkkovalev",
+        "module": "rocket-watcher-common-jvm",
+        "version": "0.0.1"
+      }
+    },
+    {
+      "name": "metadata-api",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "available-at": {
+        "url": "../../RocketWatcherCommon-metadata/0.0.1/RocketWatcherCommon-metadata-0.0.1.module",
+        "group": "ru.dkkovalev",
+        "module": "RocketWatcherCommon-metadata",
+        "version": "0.0.1"
+      }
+    }
+  ]
+}

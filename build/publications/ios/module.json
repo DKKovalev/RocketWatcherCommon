@@ -1,0 +1,117 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../RocketWatcherCommon/0.0.1/RocketWatcherCommon-0.0.1.module",
+    "group": "ru.dkkovalev",
+    "module": "RocketWatcherCommon",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "moksscfos5fjjiftfeohvzhybu"
+    }
+  },
+  "variants": [
+    {
+      "name": "ios-api",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-ios",
+          "version": {
+            "requires": "1.3.2"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-json-native",
+          "version": {
+            "requires": "1.3.2"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-serialization-iosx64",
+          "version": {
+            "requires": "1.3.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core-native",
+          "version": {
+            "requires": "1.3.5"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.3.72"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-core",
+          "version": {
+            "requires": "1.3.2"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-json",
+          "version": {
+            "requires": "1.3.2"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-serialization",
+          "version": {
+            "requires": "1.3.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core-common",
+          "version": {
+            "requires": "1.3.5"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "RocketWatcherCommon.klib",
+          "url": "RocketWatcherCommon-ios-0.0.1.klib",
+          "size": 11235,
+          "sha512": "c7aa3319ad2800e4b78076b48bf02f154c6b62066c4e5aa0fe7c66661a28b4654ac1592692f3c61e5e079f14d99b67a57216e182c7970030450ec710118bf2dd",
+          "sha256": "345cffc18fff6800284a27092d4dade83a096feef347afdde550f230b16a48ed",
+          "sha1": "60871ba7c12544367ba883dcce238ae849719733",
+          "md5": "3d4fc42f7787056e627a390ecbff1ed9"
+        }
+      ]
+    },
+    {
+      "name": "metadata-api",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "available-at": {
+        "url": "../../RocketWatcherCommon-metadata/0.0.1/RocketWatcherCommon-metadata-0.0.1.module",
+        "group": "ru.dkkovalev",
+        "module": "RocketWatcherCommon-metadata",
+        "version": "0.0.1"
+      }
+    }
+  ]
+}

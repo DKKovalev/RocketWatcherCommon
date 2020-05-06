@@ -1,0 +1,38 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../RocketWatcherCommon/0.0.1/RocketWatcherCommon-0.0.1.module",
+    "group": "ru.dkkovalev",
+    "module": "RocketWatcherCommon",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.3",
+      "buildId": "moksscfos5fjjiftfeohvzhybu"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadata-api",
+      "attributes": {
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "RocketWatcherCommon-metadata-0.0.1.jar",
+          "url": "RocketWatcherCommon-metadata-0.0.1.jar",
+          "size": 2014,
+          "sha512": "2e6748ff956de833dd5678ade58141deed0968e2185c73ce479efcb571a369773549da249d0156460d656b74a3eff25f882b094f716526e847795a41a3c38b23",
+          "sha256": "4cebe1e6810b75b5a0843d9246c3010c4e2468fa4d7b28554219008bfb51aac8",
+          "sha1": "263ca7596ee69a48ac62d822031382aae8f292df",
+          "md5": "6623fa64b4a66a0d22e60bbecabd337c"
+        }
+      ]
+    }
+  ]
+}

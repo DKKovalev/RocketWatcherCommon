@@ -1,0 +1,6 @@
+framework module RocketWatcherCommon {
+    umbrella header "RocketWatcherCommon.h"
+
+    export *
+    module * { export * }
+}

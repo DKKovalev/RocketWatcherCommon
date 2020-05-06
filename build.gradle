@@ -1,0 +1,103 @@
+plugins {
+    id 'org.jetbrains.kotlin.multiplatform' version '1.3.72'
+    id 'maven-publish'
+}
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {url "https://jitpack.io"}
+}
+group 'ru.dkkovalev'
+version '0.0.1'
+
+apply plugin: 'maven-publish'
+apply from: 'versions.gradle'
+
+/*publishing {
+    repositories {
+        maven {
+            def localDist = "$buildDir/repos/releases"
+            url = localDist
+        }
+    }
+}*/
+
+
+
+kotlin {
+    jvm()
+    // This is for iPhone emulator
+    // Switch here to iosArm64 (or iosArm32) to build library for iPhone device
+    iosX64("ios") {
+        binaries {
+            framework()
+        }
+    }
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation kotlin('stdlib-common')
+
+                implementation "io.ktor:ktor-client-core:$ktor_version"
+                implementation "io.ktor:ktor-client-json:$ktor_version"
+                implementation "io.ktor:ktor-client-serialization:$ktor_version"
+
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version")
+            }
+        }
+        commonTest {
+            dependencies {
+                implementation kotlin('test-common')
+                implementation kotlin('test-annotations-common')
+            }
+        }
+        jvmMain {
+            dependencies {
+                implementation kotlin('stdlib')
+
+                api "io.ktor:ktor-client-android:$ktor_version"
+                api "io.ktor:ktor-client-json-jvm:$ktor_version"
+                api "io.ktor:ktor-client-serialization-jvm:$ktor_version"
+
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
+                implementation "io.ktor:ktor-client-okhttp:$ktor_version"
+            }
+        }
+        jvmTest {
+            dependencies {
+                implementation kotlin('test')
+                implementation kotlin('test-junit')
+            }
+        }
+        iosMain {
+            dependencies {
+
+                implementation "io.ktor:ktor-client-ios:$ktor_version"
+                implementation "io.ktor:ktor-client-json-native:$ktor_version"
+                implementation "io.ktor:ktor-client-serialization-iosx64:$ktor_version"
+
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version")
+            }
+        }
+        iosTest {
+        }
+    }
+}
+
+task ios {
+    def device = project.findProperty("iosDevice")?.toString() ?: "iPhone 8"
+    dependsOn kotlin.targets.ios.binaries.getTest('DEBUG').linkTaskName
+    group = JavaBasePlugin.VERIFICATION_GROUP
+    description = "Runs tests for target 'ios' on an iOS simulator"
+
+    doLast {
+        def binary = kotlin.targets.ios.binaries.getTest('DEBUG').outputFile
+        exec {
+            commandLine 'xcrun', 'simctl', 'spawn', device, binary.absolutePath
+        }
+    }
+}
+
+configurations {
+    compileClasspath
+}
