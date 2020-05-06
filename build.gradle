@@ -5,7 +5,7 @@ plugins {
 repositories {
     mavenCentral()
     jcenter()
-    maven {url "https://jitpack.io"}
+    maven {url "https://www.jitpack.io"}
 }
 group 'ru.dkkovalev'
 version '0.0.1'
@@ -55,9 +55,9 @@ kotlin {
             dependencies {
                 implementation kotlin('stdlib')
 
-                api "io.ktor:ktor-client-android:$ktor_version"
-                api "io.ktor:ktor-client-json-jvm:$ktor_version"
-                api "io.ktor:ktor-client-serialization-jvm:$ktor_version"
+                implementation "io.ktor:ktor-client-android:$ktor_version"
+                implementation "io.ktor:ktor-client-json-jvm:$ktor_version"
+                implementation "io.ktor:ktor-client-serialization-jvm:$ktor_version"
 
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
                 implementation "io.ktor:ktor-client-okhttp:$ktor_version"
