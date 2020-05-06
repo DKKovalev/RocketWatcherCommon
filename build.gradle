@@ -5,7 +5,7 @@ plugins {
 repositories {
     mavenCentral()
     jcenter()
-    maven {url "https://www.jitpack.io"}
+    maven { url "https://jitpack.io" }
 }
 group 'ru.dkkovalev'
 version '0.0.1'
